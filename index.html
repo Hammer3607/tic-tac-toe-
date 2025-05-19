@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Toe - Aryan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Landing Page -->
+  <div id="landing-page" class="screen active">
+    <h1 class="title">Tic Tac Toe</h1>
+    <button class="btn" id="play-btn">Play Game</button>
+    <button class="btn" id="settings-btn">Settings</button>
+    <div class="credits">
+      <p>Made by Aryan</p>
+      <p>Made in India</p>
+    </div>
+  </div>
+
+  <!-- Mode Selection -->
+  <div id="mode-selection" class="screen">
+    <h2 class="subtitle">Select Game Mode</h2>
+    <button class="btn" id="pvp-btn">Player vs Player</button>
+    <button class="btn" id="pvc-btn">Player vs AI</button>
+    <button class="btn" id="mode-back-btn">Back</button>
+  </div>
+
+  <!-- Settings Screen -->
+  <div id="settings-screen" class="screen">
+    <h2 class="subtitle">Settings</h2>
+
+    <div class="setting-group">
+      <label for="sound-volume">Sound Volume:</label>
+      <input type="range" id="sound-volume" min="0" max="1" step="0.05" value="0.5" />
+    </div>
+
+    <div class="setting-group">
+      <label for="theme-select">Select Theme:</label>
+      <select id="theme-select">
+        <option value="neon">Neon</option>
+        <option value="dark">Dark</option>
+        <option value="blue">Blue Glow</option>
+        <option value="red">Red Glow</option>
+      </select>
+    </div>
+
+    <div class="setting-group">
+      <label for="ai-difficulty">AI Difficulty:</label>
+      <select id="ai-difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+
+    <button class="btn" id="settings-close-btn">Close</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen">
+    <h2 class="subtitle">Game On!</h2>
+    <div id="game-board">
+      <div class="cell" data-cell="0"></div>
+      <div class="cell" data-cell="1"></div>
+      <div class="cell" data-cell="2"></div>
+      <div class="cell" data-cell="3"></div>
+      <div class="cell" data-cell="4"></div>
+      <div class="cell" data-cell="5"></div>
+      <div class="cell" data-cell="6"></div>
+      <div class="cell" data-cell="7"></div>
+      <div class="cell" data-cell="8"></div>
+      <svg id="winning-line" viewBox="0 0 300 300" style="position:absolute;top:0;left:0;width:300px;height:300px;pointer-events:none;">
+        <line x1="0" y1="0" x2="0" y2="0" stroke="#00ffff" stroke-width="8" stroke-linecap="round" style="opacity: 0; transition: opacity 0.3s ease;" />
+      </svg>
+    </div>
+    <button class="btn" id="game-back-btn">Main Menu</button>
+  </div>
+
+  <audio id="sound-x" src="https://freesound.org/data/previews/66/66717_931655-lq.mp3"></audio>
+  <audio id="sound-o" src="https://freesound.org/data/previews/146/146725_2437358-lq.mp3"></audio>
+  <audio id="sound-win" src="https://freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
